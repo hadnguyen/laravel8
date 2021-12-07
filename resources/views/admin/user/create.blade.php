@@ -7,7 +7,7 @@
         @csrf
         <div class="form-group">
             <label for="name">Tên</label>
-            <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+            <input type="text" class="form-control" name="name" id="name" value="{{old('name')}}" aria-describedby="helpId" placeholder="">
             @error('name')
                 <div class="help-text text-danger">{{ $message }}</div>
             @enderror

@@ -40,7 +40,7 @@
                         @if ($user->level==0)
                             <span class="badge badge-danger">Sys admin</span>
                         @elseif ($user->level==1)
-                            <span class="badge badge-success">Người quản lí</span>
+                            <span class="badge badge-primary">Người quản lí</span>
                         @else
                             <span class="badge badge-success">User</span>
                         @endif

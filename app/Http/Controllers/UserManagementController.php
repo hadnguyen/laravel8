@@ -98,12 +98,12 @@ class UserManagementController extends Controller
         $request->validate(
             [
                 "name" => 'required',
-                "email" => 'required|unique:users',
+                "email" => 'required|unique:users,email,'.$user->id,
             ],
             [
                 "name.required" => "Tên không được để trống",
                 "email.required" => "Email không được để trống",
-                // "email.unique" => "Email không hợp lệ",
+                "email.unique" => "Email bị trùng",
             ]
         );
 
